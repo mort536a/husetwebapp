@@ -1,19 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title> Title </title>
+    <title>Event page</title>
+<style>
+    body {
+        margin: auto;
+    }
+
+    .container {
+
+        background-color: beige;
+    }
+
+    .nav {
+        z-index: 1;
+
+        background-color: #faf0a4;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        height: 100%;
+        display: grid;
+        grid-template: 1fr/ 100px 100px 1fr 100px 100px;
+
+
+    }
+
+    .logo {
+        grid-area: 1/1/1/1;
+        font-size: 2em;
+
+    }
+
+    .soME {
+        font-size: 2em;
+        grid-area: 1/5/1/5;
+    }
+
+    .sprog {
+        font-size: 2em;
+        grid-area: 1/4/1/4;
+    }
+
+    label {
+        font-size: 2em;
+        grid-area: 1/2/1/2;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+
+    .info{
+        display: grid;
+        grid-template: 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+
+    .dato{
+        grid-area: 1/2/1/2;
+    }
+    .tid{
+        grid-area: 1/3/1/3;
+    }
+    .overskrift{
+        grid-area: 2/2/2/2;
+    }
+
+    .sted{
+        grid-area: 1/6/1/6;
+    }
+    .pris{
+        grid-area: 2/6/2/6;
+    }
+    .bestil{
+        grid-area: 2/7/2/7;
+    }
+
+
+    .footer {
+        z-index: 1;
+
+        background-color: #383736;
+        color: white;
+
+
+        z-index: 2;
+        height: 100%;
+        display: grid;
+        grid-template: 1fr/ 1fr 1fr 1fr 1fr;
+
+    }
+
+    .soMeFooter {
+        font-size: 2em;
+    }
+
+    .adresse {
+        font-size: 2em;
+    }
+
+    .kontakt {
+        font-size: 2em;
+    }
+
+    .sponsor {
+        font-size: 2em;
+    }
+
+    @media only screen and (max-width: 767px) {
+
+
+         .nav {
+        z-index: 1;
+
+        background-color: #faf0a4;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        height: 100%;
+        display: grid;
+        grid-template: 1fr/ 1fr 1fr 1fr;
+        width: 100%;
+             text-align: center;
+
+    }
+        label{
+
+            grid-area: 1/3/1/3;
+        }
+
+        .soME {
+
+            grid-area: 1/2/1/2;
+
+        }
+
+        .logo {
+            grid-area: 1/1/1/1;
+        }
+
+        .sprog {
+            grid-area: 1/1/1/1;
+            visibility: collapse;
+        }
+
+
+
+        .footer {
+        z-index: 1;
+
+        background-color: #383736;
+        color: white;
+
+
+        z-index: 2;
+        height: 100%;
+        display: grid;
+        grid-template: 1fr 1fr/ 1fr 1fr 1fr;
+
+    }
+        .soMeFooter {
+            grid-area: 2/1/2/1;
+
+        }
+
+        .kontakt{
+            grid-area: 2/2/2/2;
+        }
+
+        .sponsor{
+            grid-area: 2/3/2/3;
+            text-align: right;
+        }
+
+/*---Overskrift---*/
+        .info{
+            display: grid;
+            grid-area: 2/1/3;
+            grid-template: 1fr 1fr/1fr 1fr 1fr;
+            text-align: center;
+            background-color: dimgrey;
+            font-size: 1.4em
+        }
+
+
+        .overskrift{
+            margin-bottom: 0px;
+            margin-top: 6px;
+        }
+
+        .sted{
+            margin-bottom: 0px;
+            margin-top: 6px;
+        }
+
+        .dato{
+            margin-bottom: 0px;
+            margin-top: 6px;
+        }
+
+        .pris{
+            margin-bottom: 0px;
+            margin-top: 6px;
+        }
+        .tid{
+            margin-bottom: 0px;
+            margin-top: 6px;
+        }
+        .bestil {
+            margin-bottom: 10px;
+            margin-top: 6px;
+        }
+
+
+/*---IMG---*/
+        img{
+            width: 100%;
+        }
+
+
+/*---Info om event---*/
+        .event_info{
+            display: grid;
+            grid-template: 1fr 1fr/ 1fr 1fr;
+            margin-top: 1em;
+
+        }
+
+
+
+    }
+</style>
 </head>
 
 <body>
-    <div id="kontainer">
-        <div id="navn">
-            <p>Overskrift, dato, tid, sted, pris, bestil, mere tekst puttet ind her</p>
+<div class="nav">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle" />
+            <a class="logo">Logo</a>
+            <div class="menu"></div>
+            <a class="soME">SoMe</a>
+            <a class="sprog">Sprog</a>
         </div>
 
+<div class="info">
+    <h3 class="overskrift">Overskrift</h3>
+    <h3 class="sted">Sted</h3>
+    <h3 class="dato">Dato</h3>
+    <h3 class="tid">Tid</h3>
+    <h3 class="pris">Pris</h3>
+    <h3 class="bestil">Bestil</h3>
     </div>
+
+<img src="imgs/Event_page_img_1.jpg" alt="Billede">
+
+<div class="event_info">
+    <p>Tekst (info om eventen)<br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent laoreet, libero sed pulvinar euismod, ligula magna ornare risus, nec tempor odio elit vitae nulla. Nulla consequat dolor eget ipsum tempus porttitor. Vivamus egestas dui enim, eu viverra ante porta ut. Ut facilisis faucibus est, a efficitur dui varius cursus. Donec vel elit varius dolor fermentum fringilla. Sed non nibh a ante luctus congue. Donec ante tellus, finibus sit amet cursus eget, ultricies non nisl. Ut sagittis diam at eros volutpat, porttitor gravida arcu sagittis. Nullam dignissim vestibulum erat, sit amet eleifend quam laoreet non.
+</p>
+    <p>Tekst (praktiske informationer)<br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent laoreet, libero sed pulvinar euismod, ligula magna ornare risus, nec tempor odio elit vitae nulla. Nulla consequat dolor eget ipsum tempus porttitor. Vivamus egestas dui enim, eu viverra ante porta ut. Ut facilisis faucibus est, a efficitur dui varius cursus. Donec vel elit varius dolor fermentum fringilla. Sed non nibh a ante luctus congue. Donec ante tellus, finibus sit amet cursus eget, ultricies non nisl. Ut sagittis diam at eros volutpat, porttitor gravida arcu sagittis. Nullam dignissim vestibulum erat, sit amet eleifend quam laoreet non.
+
+</p>
+</div>
+
+  <footer>
+        <div class="footer">
+            <a class="adresse">Logo</a>
+            <div class="soMeFooter"> SoMe</div>
+            <a class="kontakt">Kontakt</a>
+            <a class="sponsor">Sponsor</a>
+        </div>
+    </footer>
+
+
 </body>
+
 </html>
