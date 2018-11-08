@@ -1,56 +1,39 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing-page</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Title </title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 8px;
+            grid-row-gap: 4px;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
 </head>
 
-<body>
-
-    <main>
-        <div id="container">
-            <div id="box1">
-                <a href="">
-                    <img src="iconer/frivilig.png" style="width:100%">
-                </a>
-            </div>
-            <div id="box2">
-                <a href="">
-                    <img src="iconer/bio.png" style="width:100%">
-                </a>
-            </div>
-            <div id="box3">
-                <a href="cafe.html">
-                    <img src="iconer/cafe.png" style="width:100%">
-                </a>
-            </div>
-            <div id="box4">
-                <a href="Event_page.html">
-                    <img src="iconer/events.png" style="width:100%">
-                </a>
-            </div>
-            <div id="box5">
-                <a href="contact.html">
-                    <img src="iconer/info.png" style="width:100%">
-                </a>
-            </div>
-            <div id="box6">
-                <a href="">
-                    <img src="iconer/omhuset.png" style="width:100%">
-                </a>
-            </div>
+<body background=imgs/hset.png style="background-repeat: no-repeat;">
+    <div class="container">
+        <div class="centered">
+            <a href="index2.html"><img src="iconer/started-icon-12.jpg.png" width="100%" title="Huset" alt="Undertale Sans"></a>
         </div>
-    </main>
-
-
-    <script>
-    </script>
+    </div>
 </body>
+
 </html>
-
-
-
-
-
