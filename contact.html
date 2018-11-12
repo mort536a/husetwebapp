@@ -5,23 +5,68 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-</head>
+
 <style>
     body {
         color: white;
-
-
+        background-color: black;
     }
 
     .aabningstider {
         columns: 50px 2;
     }
+
+    .header-data{
+            color: white;
+            display: grid;
+            grid-area: 1/3;
+            grid-template: 1fr/ 1fr 1fr 1fr;
+            border-bottom: solid white 2px;
+            margin-bottom: 1.4em;
+        }
+
+        .header-data a{
+            grid-area: 1/1/1/1;
+            background-image: url(iconer/App_Ikon_Huset_Artboard200px.svg);
+            height: 80%;
+            background-repeat: no-repeat;
+
+        }
+
+
+        .header-data h3{
+            font-size: 24px;
+            grid-area: 1/2/2/3;
+            text-align: center;
+        }
+
+     a:link, a:visited {
+            color: red;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-top: 1em;
+        }
+
+
+        a:hover, a:active {
+            text-decoration: underline;
+
+        }
+
+
+
 </style>
-
-<body style="background-color: black;">
-
+    </head>
     <header>
+    <section class="header-data">
+        <a href="index2.html"></a>
+
+        <h3>Kontakt</h3>
+    </section>
     </header>
+
 
     <main>
 
@@ -46,7 +91,7 @@
 
         <div class="tekst">
             <h3>HUSET-KBH</h3>
-            <p>Rådhusstræde 13<br> 1466 København K<br>Tlf: 21 51 21 51<br>info@huset-kbh.dk<br>Husets reception har åbent for henvendelser i hverdage ml. 11.00-15.00.<br><a href="https://huset-kbh.dk/kontakt-huset-kbh-kontakt-huset/kontakt-husets-administration/">Du kan også finde Husets Administration her</a>
+            <p>Rådhusstræde 13<br> 1466 København K<br>Tlf: 21 51 21 51<br>info@huset-kbh.dk<br>Husets reception har åbent for henvendelser i hverdage ml. 11.00-15.00.<br><a href="https://huset-kbh.dk/kontakt-huset-kbh-kontakt-huset/kontakt-husets-administration/">Tryk her for at komme ind på Husets Administration</a>
             </p>
             <div class="maps">
                 <img src="imgs/kort.PNG" width=100%>
@@ -55,7 +100,5 @@
 
     </main>
     <footer>Footer menu</footer>
-
-</body>
 
 </html>
