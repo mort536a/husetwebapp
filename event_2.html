@@ -14,41 +14,94 @@
         body {
             margin: 0 0 20px;
             padding: 20px;
+            color: white;
+            background-color: black
         }
 
         img {
-            padding: 0px;
+            width: 94%;
+            border: solid white 2px;
+            margin-bottom: 1.6em;
+            padding: 10px
         }
 
+        .eventContainer{
+            border: solid white 2px;
+            margin-bottom: 1.6em;
+            padding: 10px;
+        }
+
+
         footer {
-            background-color: #F8F8F8;
-            border-top: 1px solid #E7E7E7;
+            background-color: #FFFFFF;
+            border-top: 1px solid #ffffff;
             text-align: center;
             padding: 20px;
             position: absolute;
             left: 0;
             bottom: 0;
-            height: 20px;
+            height: 10px;
             width: 100%;
+            background-color: black;
+        }
+        .header-data{
+            color: white;
+            display: grid;
+            grid-area: 1/3;
+            grid-template: 1fr/ 1fr 1fr 1fr;
+            border-bottom: solid white 2px;
+            margin-bottom: 1.4em;
+        }
+
+        .header-data a{
+            grid-area: 1/1/1/1;
+            background-image: url(iconer/App_Ikon_Huset_Artboard200px.svg);
+            background-repeat: no-repeat;
+
+        }
+
+
+        .header-data h3{
+            font-size: 24px;
+            grid-area: 1/2/2/3;
+            text-align: center;
+        }
+
+        .share-container{
+            border: solid white 2px;
+            margin-bottom: 1em;
+            padding-left: 32%
+        }
+
+        .share-container p{
+            border: solid white 2px;
+            padding: 4px;
+            width: 50%;
+            text-align: center;
+
         }
     </style>
 </head>
 <header>
+    <section class="header-data">
+        <a href="index2.html"></a>
 
+        <h3>Overskirft</h3>
+    </section>
 </header>
 
 <body>
-    <container id="1">
-        <div class="info">
-            <h3 class="overskrift">Titel af event</h3>
-            <p><i>Her kan du se dato, tid, sted, og andre praktiske oplysninger på eventet</i></p>
-        </div>
 
 
         <div class="image">
             <img src="imgs/bob-ross-1-1280x800.jpg" width=100%>
         </div>
+<article class="eventContainer">
 
+       <div class="info">
+            <h3 class="overskrift">Titel af event</h3>
+            <p><i>Her kan du se dato, tid, sted, og andre praktiske oplysninger på eventet</i></p>
+        </div>
         <div class="tekst">
             <h3>Happy little trees</h3>
             <p>That'll be a challenge! Let's just do a painting that's fun. You have to make all these big decisions when you have power. All these fantastic things... they just sorta happen. You have to make friends with it. Anything that happens here, we can live with and we can turn it into something that looks pretty good most of the time. Follow these angles. </p>
@@ -60,7 +113,15 @@
             <p>Don't just cover it all up -- leave these spots! I like to be able to create my own world. I lived in Alaska for many, many years. People are so excited when they see this happen. You know me -- I love water. This is the lazy man's way of painting. Let's put in a happy little sky.
             </p>
         </div>
-    </container>
-    <footer>Footer menu</footer>
+        </article>
+
+
+    <article class="share-container">
+
+        <p>Sæt reminder</p>
+        <p>Notification</p>
+        <p>Del på Facebook</p>
+
+    </article>
 </body>
 </html>
