@@ -1,40 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="da">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Title </title>
-    <style>
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
-            grid-column-gap: 8px;
-            grid-row-gap: 4px;
-            position: relative;
-            text-align: center;
-            color: white;
-        }
+    <title>Landing-page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    #container {
+        display: grid;
+        grid-template: 1fr 1fr/1fr;
+        grid: 2/1 grid-column-gap: 8px;
+        grid-row-gap: 4px;
 
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 140%);
-        }
+    }
+
+    #box1 {
+        grid-area: 1/1/2/1;
+        border: solid white 2px;
+        margin-bottom: 10px;
+
+    }
+
+
+    #box2 {
+        grid-area: 2/1/2/1;
+        border: solid white 2px;
+    }
 
 
     </style>
-</head>
 
-<body background=imgs/hset.png style="background-repeat: no-repeat;">
-    <div class="container">
-        <div class="centered">
-            <a href="index2.html"><img src="iconer/started-icon-12.jpg.png" width="100%" title="Huset" alt="Undertale Sans"></a>
+<body>
+
+    <main>
+        <div id="container">
+
+            <div id="box1">
+                <a href="Event_page.html">
+                    <img src="iconer/Huset_website_ikoner_events.svg" style="width:100%">
+                </a>
+            </div>
+            <div id="box2">
+                <a href="contact.html">
+                    <img src="iconer/Huset_website_ikoner_info.svg" style="width:100%">
+                </a>
+            </div>
+
         </div>
-    </div>
-</body>
+    </main>
 
+
+    <script>
+    </script>
+</body>
 </html>
+
+
+
+
+
